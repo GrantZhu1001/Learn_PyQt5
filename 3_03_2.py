@@ -20,7 +20,7 @@ class Example(QMainWindow):
         self.show()
 
     def mousePressEvent(self, e):
-        self.c.closeApp.emit()
+        self.c.closeApp.emit()  #发出信号
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
