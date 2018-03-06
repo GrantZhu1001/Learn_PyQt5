@@ -24,7 +24,7 @@ class Example(QMainWindow):
         self.statusBar()
 
         grid = QGridLayout()
-        grid.setSpacing(10)
+        grid.setSpacing(10)     #设置间隔10
 
         x = 0
         y = 0
@@ -32,7 +32,7 @@ class Example(QMainWindow):
         self.text = 'x:{0}, y:{1}'.format(x, y)
 
         self.label = QLabel(self.text, self)
-        grid.addWidget(self.label, 0, 0, Qt.AlignTop)
+        grid.addWidget(self.label, 0, 0, Qt.AlignTop)   #顶部对齐
 
         self.setMouseTracking(True)
         self.setLayout(grid)
@@ -51,6 +51,7 @@ class Example(QMainWindow):
 
     def buttonClicked(self):
         sender = self.sender()  #事件源
+        #self.statusBar().showMessage(self.sender().text() + ' was pressed')
         self.statusBar().showMessage(sender.text() + ' was pressed')
 
 if __name__ == '__main__':
