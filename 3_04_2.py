@@ -3,7 +3,7 @@
 
 import sys
 from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QPushButton,
-    QSizePolicy, QLabel, QFontDialog)
+    QSizePolicy, QFontDialog)
 #该QSizePolicy类是描述水平和垂直大小调整的政策布局属性
 
 class APP(QWidget):
