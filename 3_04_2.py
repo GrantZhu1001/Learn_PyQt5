@@ -2,7 +2,7 @@
 #字体选择框
 
 import sys
-from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QPushButton,
+from PyQt5.QtWidgets import (QApplication, QWidget, QVBoxLayout, QPushButton, QLabel, 
     QSizePolicy, QFontDialog)
 #该QSizePolicy类是描述水平和垂直大小调整的政策布局属性
 
