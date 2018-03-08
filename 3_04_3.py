@@ -1,5 +1,5 @@
 #2018年3月5日 23:00:23
-#文件对话框
+#文件对话框   只能打开几十行代码的文件，一百多行的直接崩溃。。。
 import sys
 from PyQt5.QtWidgets import (QApplication, QMainWindow, QTextEdit,
     QAction, QFileDialog)
@@ -8,6 +8,7 @@ from PyQt5.QtGui import QIcon
 class Tire(QMainWindow):
     def __init__(self):
         super().__init__()
+
         self.initUI()
 
     def initUI(self):
@@ -29,14 +30,16 @@ class Tire(QMainWindow):
         self.show()
 
     def showDialog(self):
-        fname = QFileDialog.getOpenFileName(self, 'open file', 'home')
+        fname = QFileDialog.getOpenFileName(self, 'Open File', 'home')
+        #print(type(fname))     <class 'tuple'>
+        #print(type(fname[0]))  <class 'str'>
+        #print(type(fname[1]))  <class 'str'>
         if fname[0]:
-            f = open(fname[0], 'r')
-            with f:
+            with open(fname[0], 'r') as f:
                 data = f.read()
                 self.textEdit.setText(data)
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
+    app = QApplication([])
     ex = Tire()
     sys.exit(app.exec_())
