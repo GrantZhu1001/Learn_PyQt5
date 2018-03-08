@@ -1,0 +1,13 @@
+目前已经学习的PyQt5里面的QtWidgets/QtGui/QtCore所内含的类
+
+QtWidgets: QApplication/QMainWindow/QPushButton/QMessageBox/QWidget/QToolTip/QDesktopWidget/
+/QLCDNumber/QSlider/QLabel/QLineEdit/QFrame/QSizePolicy/QTextEdit/QAction/
+
+QtWidgets(布局类): QVBoxLayout/QGridLayout/
+QtWidgets(对话框): QInputDialog/QColorDialog/QFontDialog/QFileDialog
+
+QtGui: QIcon/QFont/QColor
+
+QtCore: QCoreApplication/Qt/pyqtSignal/QObject/
+
+注：QSizePolicy类是描述水平和垂直大小调整的政策布局属性
